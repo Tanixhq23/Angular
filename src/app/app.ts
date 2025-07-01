@@ -37,15 +37,51 @@ export class App {
     console.log("Function called", event.type);
     console.log("value", (event.target as HTMLInputElement).value);
   } */
- name = "";
- displayName = "";
- getName(event:Event){
-  this.name= (event.target as HTMLInputElement).value;
- }
- showName(){
-  this.displayName = this.name;
- }
- setName(){
-  this.name = "Bob"
- }
+  /* name = "";
+  displayName = "";
+  getName(event:Event){
+   this.name= (event.target as HTMLInputElement).value;
+  }
+  showName(){
+   this.displayName = this.name;
+  }
+  setName(){
+   this.name = "Bob"
+  } */
+  /* display=true;
+  toggleDiv = true; */
+  /* x=10;
+  hide(){
+    this.display=false;
+  }
+  show(){
+    this.display=true;
+  }
+  toggle(){
+    this.display=!this.display;
+  } */
+  /* toggletwo(){
+    this.toggleDiv = !this.toggleDiv;
+  } */
+  /* color=3;
+  handleColor(val:number){
+   this.color=val
+  }
+  handleInput(event:Event){
+   this.color = parseInt((event.target as HTMLInputElement).value);;
+  } */
+  /* color="red";
+  handleColor(val:string){
+    this.color=val;
+  }
+  changeColor(event: Event){
+    this.color=(event.target as HTMLInputElement).value;
+  } */
+ users=["Anil", "Sam", "Amit", "Rahul", "Anuj"];
+ students=[
+  {name: 'Tanishq', age:19},
+  {name: 'Anil', age:37},
+  {name: 'Amit', age:45},
+  {name: 'Sam', age:29},
+ ]
 }

@@ -34,11 +34,90 @@
 
 <input (focus)="handleEvent($event)" (blur)="handleEvent($event)"  type="text" (input)="handleEvent($event)" name="user"> -->
 <!-- Get and Set input field value -->
- <h1>Get and Set input field value</h1>
- <h2>User name is: {{displayName}}</h2>
-<input type = "text" value="{{name}}" placeholder="Enter your name" (input)="getName($event)">
+<!-- <h1>Get and Set input field value</h1>
+<h2>User name is: {{displayName}}</h2>
+<input type="text" value="{{name}}" placeholder="Enter your name" (input)="getName($event)">
 <br><br>
 <button (click)="showName()">Get Name</button>
-<button (click)="setName()">Set Name</button>
-<hr> 
-<input type="text" placeholder="Enter your email">
+<button (click)="setName()">Set Name</button> -->
+<!-- If-Else Condition -->
+<!-- <h1>If-Else Condition</h1> -->
+<!-- <button (click)="hide()">Hide Div</button>
+<button (click)="show()">Show Div</button> -->
+<!-- <button (click)="toggle()">Toggle Div</button>
+@if(display){
+    
+    <div style="width:200px; height: 200px; background-color: green;"></div>
+} -->
+<!-- @if(x==10){
+    
+<div style="width:200px; height: 200px; background-color: green;"></div>
+} -->
+<!-- <hr>
+<button (click)="toggletwo()">Toggle 2 Divs</button>
+@if (toggleDiv) {
+    <div style="background-color: gold;width: 200px; height: 200px"></div>
+}
+@else{
+    <div style="background-color: red;width: 200px; height: 200px"></div>
+
+} -->
+<!-- Else if -->
+<!-- <h1>Else if</h1>
+<button (click)="handleColor(1)">Red</button>
+<button (click)="handleColor(2)">Green</button>
+<button (click)="handleColor(3)">Blue</button>
+<button (click)="handleColor(4)">Black</button>
+<input type="text" (input)="handleInput($event)" placeholder="Enter any number">
+@if(color==1){
+
+<div style="background-color: red; width:100px; height:100px"></div>
+}
+@else if (color==2) {
+
+<div style="background-color: green; width:100px; height:100px"></div>
+}
+@else if (color==3) {
+
+<div style="background-color: blue; width:100px; height:100px"></div>
+}
+@else {
+
+<div style="background-color: black; width:100px; height:100px"></div>
+} -->
+<!-- Switch case -->
+<!-- <h1>Switch Case</h1>
+<button (click)="handleColor('red')">RED</button>
+<button (click)="handleColor('green')">GREEN</button>
+<button (click)="handleColor('blue')">BLUE</button>
+<button (click)="handleColor('black')">BLACK</button>
+<button (click)="handleColor('gold')">GOLD</button>
+
+<input type="text" (input)="changeColor($event)"placeholder="Enter the color name">
+@switch (color) {
+    @case('red'){
+        <div style="background-color: red; width:100px; height:100px"></div>
+    }
+    @case('green'){
+        <div style="background-color: green; width:100px; height:100px"></div>
+    }
+    @case('blue'){
+        <div style="background-color: blue; width:100px; height:100px"></div>
+    }
+    @case('black'){
+        <div style="background-color: black; width:100px; height:100px"></div>
+    }
+    @default {
+        <div style="background-color: gold; width:100px; height:100px"></div>
+
+    }
+} -->
+<!-- For loops -->
+<h1>For loops</h1>
+@for(user of users; track user){
+    <h2>{{user}}</h2>
+}
+<hr>
+@for(item of students; track item.age){
+    <h2>{{item.age}}</h2>
+}
