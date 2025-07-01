@@ -1,0 +1,44 @@
+<!-- <h1>Angular Tutorial</h1> -->
+<!-- Interpolation -->
+<!-- <h3>{{title}}</h3>
+<h3>{{name}}</h3>
+<h3>2+2</h3>
+<h3>{{2+2}}</h3>
+<h3>{{'tanishq'.toUpperCase()}}</h3> -->
+<!-- Components -->
+<!-- <app-login></app-login>
+<app-signup></app-signup> -->
+<!-- Custom Component -->
+<!-- <app-profile></app-profile> -->
+<!-- Function call on button click -->
+<!-- <button (click)="handleClickEvent()">Click Me</button> -->
+<!-- Make counter application -->
+<!-- <h1>Counter Application</h1>
+<div style="text-align:center">
+    <h2 class="count">{{count}}</h2>
+    <div>
+        <button (click)="handleCounter('minus')" class="btn bg-red">Decrement</button>
+        <button (click)="handleCounter('reset')"class="btn bg-black">Reset</button>
+        <button (click)="handleCounter('add')"class="btn bg-green">Increment</button>
+    </div>
+</div> -->
+<!-- Handling Events -->
+<!-- <h1>Event in Angular</h1>
+<button class="btn" name="login" (click)="handleEvent($event)">Click Event</button>
+<br>
+<br>
+
+<div (mouseenter)="handleEvent($event)" style="background-color: green; width: 100px; height: 100px; margin: 2px"></div>
+<div (mouseleave)="handleEvent($event)" style="background-color: green; width: 100px; height: 100px; margin:2px"></div>
+<br><br>
+
+<input (focus)="handleEvent($event)" (blur)="handleEvent($event)"  type="text" (input)="handleEvent($event)" name="user"> -->
+<!-- Get and Set input field value -->
+ <h1>Get and Set input field value</h1>
+ <h2>User name is: {{displayName}}</h2>
+<input type = "text" value="{{name}}" placeholder="Enter your name" (input)="getName($event)">
+<br><br>
+<button (click)="showName()">Get Name</button>
+<button (click)="setName()">Set Name</button>
+<hr> 
+<input type="text" placeholder="Enter your email">
