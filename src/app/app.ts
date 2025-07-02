@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
@@ -84,6 +84,23 @@ export class App {
    {name: 'Amit', age:45},
    {name: 'Sam', age:29},
   ] */
-  count = signal(10);
-  x=20;
+  /* count = signal(10);
+  x = 20;
+  constructor() {
+    effect(() => {
+      console.log(this.count());
+
+    })
+  }
+  updateValue() {
+    this.count.set(this.count()+1);
+  } */
+  /* data = signal<string|number>(10);
+  count: Signal<number> = computed(()=>10);
+  updateSignal(){
+    this.data.set("Hello");
+  } */
+  print(){
+    console.log("Hello World");
+  }
 }
