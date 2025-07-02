@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
 import { ProfileComponent } from './profile/profile.component';
-
+import { Signal } from '@angular/core';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Login, Signup, ProfileComponent],
@@ -77,11 +77,13 @@ export class App {
   changeColor(event: Event){
     this.color=(event.target as HTMLInputElement).value;
   } */
- users=["Anil", "Sam", "Amit", "Rahul", "Anuj"];
- students=[
-  {name: 'Tanishq', age:19},
-  {name: 'Anil', age:37},
-  {name: 'Amit', age:45},
-  {name: 'Sam', age:29},
- ]
+  /* users=["Anil", "Sam", "Amit", "Rahul", "Anuj"];
+  students=[
+   {name: 'Tanishq', age:19},
+   {name: 'Anil', age:37},
+   {name: 'Amit', age:45},
+   {name: 'Sam', age:29},
+  ] */
+  count = signal(10);
+  x=20;
 }
