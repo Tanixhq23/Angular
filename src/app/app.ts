@@ -100,7 +100,5 @@ export class App {
   updateSignal(){
     this.data.set("Hello");
   } */
-  print(){
-    console.log("Hello World");
-  }
+
 }
