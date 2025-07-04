@@ -4,12 +4,13 @@ import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
 import { ProfileComponent } from './profile/profile.component';
 import { Signal } from '@angular/core';
-@Component({
+@Components{
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, ProfileComponent],
+  imports: [RouterOutlet, Login, Signup, ProfileComponent]
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
   /* title = 'Angular 19 Tutorial';
   name = 'Tanishq';
