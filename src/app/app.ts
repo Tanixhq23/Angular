@@ -1,12 +1,12 @@
 import { Component, computed, effect, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
-import { ProfileComponent } from './profile/profile.component';
+import { Header } from "./header/header";
 // Line 7 removed or commented out
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, ProfileComponent],
+  imports: [RouterLink, RouterOutlet, Header],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
