@@ -8,8 +8,35 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './home.css',
 })
 export class Home {
-  constructor(private router: Router) {}
+  // constructor(private router: Router) {}
   /* goToProfile() {
     this.router.navigate(['profile'],{queryParams:{name:'Tanishq Lokhande'}});
   } */
+  /* users = [
+    {
+      id: 1,
+      name: 'Tanishq',
+      age: 28,
+      emialid: 'tansihq@gmail.com'
+    },
+    {
+      id: 2,
+      name: 'Amit',
+      age: 28,
+      emialid: 'amit@gmail.com'
+    },
+    {
+      id: 3,
+      name: 'Tanveer',
+      age: 28,
+      emialid: 'tanveer@gmail.com'
+    },
+    {
+      id: 4,
+      name: 'Aamir',
+      age: 28,
+      emialid: 'aamir@gmail.com'
+    }
+  ] */
+
 }
