@@ -1,16 +1,15 @@
 import { Component, computed, effect, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Login } from "./login/login";
-import { Signup } from "./signup/signup";
+import { Login } from './login/login';
+import { Signup } from './signup/signup';
 import { ProfileComponent } from './profile/profile.component';
-import { Signal } from '@angular/core';
-@Components{
+// Line 7 removed or commented out
+@Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, ProfileComponent]
+  imports: [RouterOutlet, Login, Signup, ProfileComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-
 export class App {
   /* title = 'Angular 19 Tutorial';
   name = 'Tanishq';
@@ -101,5 +100,4 @@ export class App {
   updateSignal(){
     this.data.set("Hello");
   } */
-
 }
