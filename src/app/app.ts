@@ -3,10 +3,11 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Header } from "./header/header";
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 // Line 7 removed or commented out
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet, Header],
+  imports: [RouterLink, RouterOutlet, Header, ReactiveFormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -100,4 +101,14 @@ export class App {
   updateSignal(){
     this.data.set("Hello");
   } */
+ name=new FormControl();
+ password=new FormControl();
+  displayValue(){
+    console.log(this.name.value);
+    console.log(this.password.value);
+  }
+  setValue(){
+    this.name.setValue('Tanishq'); 
+    this.password.setValue('Tanishq@123'); 
+  }
 }
