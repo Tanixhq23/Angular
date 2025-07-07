@@ -2,12 +2,20 @@ import { Component, computed, effect, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
-import { Header } from "./header/header";
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { Header } from './header/header';
+import {
+  FormControl,
+  FormGroup,
+  FormsModule,
+  NgForm,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+import { NgIf } from '@angular/common';
 // Line 7 removed or commented out
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet, Header, ReactiveFormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -101,7 +109,7 @@ export class App {
   updateSignal(){
     this.data.set("Hello");
   } */
- name=new FormControl();
+  /*  name=new FormControl();
  password=new FormControl();
   displayValue(){
     console.log(this.name.value);
@@ -110,5 +118,34 @@ export class App {
   setValue(){
     this.name.setValue('Tanishq'); 
     this.password.setValue('Tanishq@123'); 
+  } */
+  /* profileForm = new FormGroup({
+  name:new FormControl('',[Validators.required]),
+  password: new FormControl('',[Validators.minLength(5),Validators.required]),
+  email:new FormControl('',[Validators.required, Validators.maxLength(50), Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
+ })
+ onSubmit(){  
+  console.log(this.profileForm.value);
+ } */
+  /* setValue(){
+  this.profileForm.setValue({
+    name: 'Tanishq',
+    password: "Blahblah",
+    email: "Blahblah"
+  })
+ } */
+  /* get name(){
+  return this.profileForm.get('name');
+}
+get password(){
+  return this.profileForm.get('password');
+}
+get email(){
+  return this.profileForm.get('email');
+} */
+  userDetails:any;
+  addDetails(val: NgForm) {
+    console.log(val);
+    this.userDetails = val;
   }
 }
