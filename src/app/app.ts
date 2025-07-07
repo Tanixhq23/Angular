@@ -12,10 +12,11 @@ import {
   Validators,
 } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { User } from "./user/user";
 // Line 7 removed or commented out
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, NgIf],
+  imports: [User],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -143,9 +144,15 @@ get password(){
 get email(){
   return this.profileForm.get('email');
 } */
-  userDetails:any;
+/*   userDetails:any;
   addDetails(val: NgForm) {
     console.log(val);
     this.userDetails = val;
-  }
+  } */
+ /* userName="Tanishq"
+ city="Mumbai"
+ onUserChange(user:string){
+  this.userName= user;
+ } */
+users=["Anil", "Tanishq", "Peter", "Tom", "Bruce", "John"];
 }

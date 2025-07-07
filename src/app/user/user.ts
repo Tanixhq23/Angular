@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -18,4 +18,7 @@ export class User {
       this.name= params['name'];
     })
   } */
+ /* @Input() user:string='';
+ @Input() city:string=''; */
+ @Input() user:string='';
 }

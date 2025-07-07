@@ -151,7 +151,7 @@
 <!-- <app-header></app-header>
 <router-outlet></router-outlet> -->
 <!-- Topic: Reactive Forms -->
-<h1>Reactive Forms</h1>
+<!-- <h1>Reactive Forms</h1> -->
 <!-- <form action="" method="post">
     <input type="text" placeholder="Enter Name" [formControl]="name">
     <br>
@@ -192,7 +192,7 @@
 <h1>{{this.profileForm.value.email}}</h1> -->
 
 <!-- Topic: Template Driven Forms -->
-<form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
+<!-- <form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
     <input #name="ngModel" type="text" required placeholder="Enter name" name="name" ngModel>
     <span class="error" *ngIf="name.invalid && name.touched">Name is required</span>
     <br><br>
@@ -215,4 +215,25 @@
 <h3>{{userDetails?.name}}</h3>
 <h3>{{userDetails?.password}}</h3>
 <h3>{{userDetails?.gender}}</h3>
-<h3>{{userDetails?.range}}</h3>
+<h3>{{userDetails?.range}}</h3> -->
+<!-- Topic: Pass data from parent component to child component -->
+<!-- Info: Static Data passing -->
+<!-- <app-user user="Tanishq"></app-user>  -->
+ <!-- Info: Dynamic Data passing -->
+ <!-- <app-user [user]="userName"></app-user> -->
+
+<!-- <app-user [user]="userName" [city]="city"></app-user> 
+
+<select #selecteduser (change)="onUserChange(selecteduser.value)" >
+    <option value="Tanishq">Tanishq</option>
+    <option value="Amit">Amit</option>
+    <option value="Peter">Peter</option>
+    <option value="Tom">Tom</option>
+</select> -->
+<!-- Topic: Reuse Component -->
+<h1>Reuse Component</h1>
+@for(user of users; track user){
+    <div>
+        <app-user [user]="user"></app-user>
+    </div>
+}
