@@ -18,7 +18,7 @@ import { Product } from './Services/product';
 // Line 7 removed or commented out
 @Component({
   selector: 'app-root',
-  imports: [User, NgIf],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
