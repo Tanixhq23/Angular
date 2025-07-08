@@ -1,4 +1,4 @@
-import { Component, computed, effect, signal } from '@angular/core';
+import { afterNextRender, afterRenderEffect, Component, computed, effect, signal, ViewChild } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
@@ -11,12 +11,14 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { User } from "./user/user";
+import { CurrencyConvertorPipe } from './pipe/currency-convertor-pipe';
+import { Product } from './Services/product';
 // Line 7 removed or commented out
 @Component({
   selector: 'app-root',
-  imports: [User],
+  imports: [User, NgIf],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -144,15 +146,57 @@ get password(){
 get email(){
   return this.profileForm.get('email');
 } */
-/*   userDetails:any;
-  addDetails(val: NgForm) {
-    console.log(val);
-    this.userDetails = val;
+  /*   userDetails:any;
+    addDetails(val: NgForm) {
+      console.log(val);
+      this.userDetails = val;
+    } */
+  /* userName="Tanishq"
+  city="Mumbai"
+  onUserChange(user:string){
+   this.userName= user;
   } */
- /* userName="Tanishq"
- city="Mumbai"
- onUserChange(user:string){
-  this.userName= user;
- } */
-users=["Anil", "Tanishq", "Peter", "Tom", "Bruce", "John"];
+  // users=["Anil", "Tanishq", "Peter", "Tom", "Bruce", "John"];
+  // username = "Tanishq";
+  // amount = 10;
+  /* counter = 0;
+  @ViewChild('user') UserComponent: any
+  constructor(){
+    afterRenderEffect(()=>{
+      console.log("AfterRender",this.UserComponent.counter);
+      
+    })
+    afterNextRender(()=>{
+      console.log("AfterNextRender",this.UserComponent.counter);
+      
+    })
+  }
+  updatetCounter(){
+    this.counter++;
+  } */
+  /* productData: {
+    name: string;
+    brand: string;
+    price: string;
+  }[] | undefined;
+  constructor(private productService: Product) {
+
+  }
+  ngOnInit() {
+    this.productData=this.productService.getProductData()
+    console.log(this.productData);
+    
+  } */
+ /* productList: any
+  constructor(private productService: Product) {
+
+  }
+  ngOnInit() {
+    this.productService.getProductList().subscribe((data:any)=>{
+      console.log(data);
+      this.productList=data.products
+    })
+  } */
+
+
 }

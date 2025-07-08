@@ -219,8 +219,8 @@
 <!-- Topic: Pass data from parent component to child component -->
 <!-- Info: Static Data passing -->
 <!-- <app-user user="Tanishq"></app-user>  -->
- <!-- Info: Dynamic Data passing -->
- <!-- <app-user [user]="userName"></app-user> -->
+<!-- Info: Dynamic Data passing -->
+<!-- <app-user [user]="userName"></app-user> -->
 
 <!-- <app-user [user]="userName" [city]="city"></app-user> 
 
@@ -231,9 +231,35 @@
     <option value="Tom">Tom</option>
 </select> -->
 <!-- Topic: Reuse Component -->
-<h1>Reuse Component</h1>
+<!-- <h1>Reuse Component</h1>
 @for(user of users; track user){
     <div>
         <app-user [user]="user"></app-user>
     </div>
-}
+} -->
+<!-- Topic: Pipes -->
+<!-- <p>{{ username | uppercase }}</p> -->
+<!-- Topic: Custom Pipes -->
+<!-- Custom Pipes -->
+<!-- <h1>{{amount | currencyConvertor}}</h1>
+<h1>{{100 | currencyConvertor:12}}</h1>
+<h1>{{100 | currencyConvertor}}</h1> -->
+<!-- Topic: Component Life Cycle -->
+<!-- <h1>Component life cycle</h1>
+<button (click)="updatetCounter()">{{counter}}</button>
+<div *ngIf="counter!=5">
+    <app-user [counter]="counter" #user ></app-user>
+</div> -->
+<!-- Topic: Services -->
+<!-- <h1>Services</h1>
+<button (click)="getProductData()" >Load Product Data</button>
+@for (item of productData; track item) {
+    <h1>{{item.name}}</h1>
+} -->
+<!-- Topic: API call -->
+<!-- <h1>API call</h1>
+@for(product of productList; track product.id){
+     <ul>
+        <li>{{product.title}}</li>
+     </ul>
+} -->
