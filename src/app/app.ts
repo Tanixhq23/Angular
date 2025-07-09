@@ -12,13 +12,15 @@ import {
   Validators,
 } from '@angular/forms';
 import { CommonModule, NgIf } from '@angular/common';
-import { User } from "./user/user";
+// import { User1 } from "./user1/user";
 import { CurrencyConvertorPipe } from './pipe/currency-convertor-pipe';
 import { Product } from './Services/product';
+import { Users } from './Services/users';
+import { User } from './interfaces/user';
 // Line 7 removed or commented out
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -197,6 +199,15 @@ get email(){
       this.productList=data.products
     })
   } */
+ users:User[]=[];
+  constructor(private userService: Users ){
 
+  }
+  ngOnInit(){
+    this.userService.getUsers().subscribe((data: User[])=>{
+      this.users=data;
+      console.log(this.users);
+    })
+  }
 
 }
