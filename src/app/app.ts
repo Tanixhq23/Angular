@@ -1,4 +1,12 @@
-import { afterNextRender, afterRenderEffect, Component, computed, effect, signal, ViewChild } from '@angular/core';
+import {
+  afterNextRender,
+  afterRenderEffect,
+  Component,
+  computed,
+  effect,
+  signal,
+  ViewChild,
+} from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
@@ -20,7 +28,7 @@ import { User } from './interfaces/user';
 // Line 7 removed or commented out
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -189,7 +197,7 @@ get email(){
     console.log(this.productData);
     
   } */
- /* productList: any
+  /* productList: any
   constructor(private productService: Product) {
 
   }
@@ -199,15 +207,32 @@ get email(){
       this.productList=data.products
     })
   } */
- users:User[]=[];
-  constructor(private userService: Users ){
-
+  users: User[] = [];
+  constructor(private userService: Users) {}
+  ngOnInit() {
+    this.getUser();
   }
-  ngOnInit(){
-    this.userService.getUsers().subscribe((data: User[])=>{
-      this.users=data;
+
+  getUser() {
+    this.userService.getUsers().subscribe((data: User[]) => {
+      this.users = data;
       console.log(this.users);
-    })
+    });
   }
 
+  addUser(user: User) {
+    this.userService.saveUsers(user).subscribe((data: User) => {
+      if (data) {
+        this.getUser();
+      }
+    });
+  }
+
+  deleteUser(id: string) {
+    this.userService.deleteUsers(id).subscribe((data: User) => {
+      if (data) {
+        this.getUser();
+      }
+    });
+  }
 }

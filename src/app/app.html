@@ -271,8 +271,22 @@
 } -->
 <!-- Topic: API Services using JSON server -->
 <h1>API Services</h1>
+
+<!-- Info: POST Method -->
+<form #userForm="ngForm" (ngSubmit)="addUser(userForm.value)" >
+    <input type="text" placeholder="enter name" name="name" ngModel>
+    <br><br>
+    <input type="text" placeholder="enter email" name="email" ngModel>
+    <br><br>
+    <input type="text" placeholder="enter age" name="age" ngModel>
+    <br><br>
+    <button>Add User</button>
+</form>
 @for (user of users; track user.id) { 
     <ul>
         <li>{{user.name}}</li>
+        <li>{{user.age}}</li>
+        <li>{{user.id}}</li>
+        <li><button (click)="deleteUser(user.id)" >Delete</button></li>
     </ul>
 }
